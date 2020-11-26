@@ -88,8 +88,8 @@
         android:label="fragment_question9"
         tools:layout="@layout/fragment_question9" >
         <action
-            android:id="@+id/action_question9Fragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            android:id="@+id/action_question9Fragment_to_resultActivity"
+            app:destination="@id/resultActivity" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"

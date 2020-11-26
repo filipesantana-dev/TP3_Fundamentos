@@ -1,6 +1,7 @@
 package com.example.tp3_fundamentos
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -45,8 +46,8 @@ class Question9Fragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_question9, container, false)
         val usuarioNome = arguments?.get("userName").toString()
-        val titulo = view.findViewById<TextView>(R.id.editTextUsuarioNome)
-        titulo.setText(usuarioNome)
+        /*val titulo = view.findViewById<TextView>(R.id.editTextUsuarioNome)
+        titulo.setText(usuarioNome)*/
 
         return view
     }
@@ -63,10 +64,14 @@ class Question9Fragment : Fragment() {
 
         btnProximaQuestao.setOnClickListener {
 
+            val usuarioNome = (requireActivity() as QuestionsActivity).nomeUsuario
+            Log.i("UsuarioNome", "Question9Fragment onViewCreated $usuarioNome")
+
             var bundleNewScore9 = Bundle(onRadioButtonClicked())
             bundleNewScore9.putInt("score9", scoreQuestion9)
+            bundleNewScore9.putString("userName", usuarioNome)
 
-            findNavController().navigate(R.id.action_question9Fragment_to_resultFragment, bundleNewScore9)
+            findNavController().navigate(R.id.action_question9Fragment_to_resultActivity, bundleNewScore9)
         }
     }
 

@@ -32,7 +32,7 @@ class Question3Fragment : Fragment() {
         1,
         2,
         4,
-        0
+        null
     )
 
     override fun onCreateView(
@@ -41,8 +41,8 @@ class Question3Fragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_question3, container, false)
         val usuarioNome = arguments?.get("userName").toString()
-        val titulo = view.findViewById<TextView>(R.id.editTextUsuarioNome)
-        titulo.setText(usuarioNome)
+        /*val titulo = view.findViewById<TextView>(R.id.editTextUsuarioNome)
+        titulo.setText(usuarioNome)*/
 
         return view
     }

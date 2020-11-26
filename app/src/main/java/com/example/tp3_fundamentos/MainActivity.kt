@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Informe seu nome", Toast.LENGTH_LONG
                 ).show()
             } else {
-                var alterActivity = Intent(
+                val alterActivity = Intent(
                         this,
                         QuestionsActivity::class.java)
                 alterActivity.putExtra("userName", nomeUsuario)

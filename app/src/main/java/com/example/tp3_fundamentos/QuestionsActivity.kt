@@ -8,18 +8,22 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class QuestionsActivity : AppCompatActivity() {
+
+    var nomeUsuario : String? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
         Log.i("CicloDeVida", "QuestionsActivity onCreate")
 
-        var usuarioNome = intent.getStringExtra("userName").toString()
+        nomeUsuario = intent.getStringExtra("userName").toString()
 
         //var finalScore: Int = 0
 
         Toast.makeText(
                 this,
-                "Olá $usuarioNome",
+                "Olá $nomeUsuario",
                 Toast.LENGTH_LONG
         ).show()
     }

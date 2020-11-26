@@ -7,34 +7,34 @@ import kotlinx.android.synthetic.main.activity_result.*
 import kotlinx.android.synthetic.main.fragment_result.*
 
 class ResultActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        /*var usuarioNome: String = intent.getStringExtra("userName").toString()
-        var exibirUsuarioNome = "Olá {$usuarioNome}"
-        textViewNomeUsuario.text = exibirUsuarioNome*/
+        var usuarioNome: String? = intent!!.getStringExtra("userName").toString()
+        textViewNomeUsuario.text = "Usuário: $usuarioNome"
 
 
-        var finalScore: Int = intent.getIntExtra("score9", 0)
+        var finalScore: Int = intent!!.getIntExtra("score9", 0)
 
-        if (finalScore <= 12){
-            textViewInvestidorPerfil.text = "O Seu Perfil é de Investidor Conservador"
-        } else if (finalScore <= 29){
-            textViewInvestidorPerfil.text = "O Seu Perfil é de Investidor Moderado"
-        } else {
-            textViewInvestidorPerfil.text = "O Seu Perfil é de Investidor Arrojado"
-        }
-
-        textViewInvestidorPerfil.text = ""
-
-
-        //textViewFinalScore.text = "Total de Pontos: $finalScore"
+        exibirTipoPerfilInvestidor(finalScore)
 
         Toast.makeText(
                 this,
                 "Pontuação final: $finalScore",
                 Toast.LENGTH_LONG
         ).show()
+        //textViewFinalScore.text = "Total de Pontos: $finalScore"
+    }
+
+    private fun exibirTipoPerfilInvestidor(finalScore: Int) {
+        textViewInvestidorPerfil.text =  if (finalScore <= 12) {
+            "Investidor -> Conservador"
+        } else if (finalScore <= 29) {
+             "Investidor: Moderado"
+        } else {
+            "Investidor: Arrojado"
+        }
     }
 }

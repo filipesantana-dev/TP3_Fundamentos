@@ -38,8 +38,8 @@ class Question4Fragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_question4, container, false)
         val usuarioNome = arguments?.get("userName").toString()
-        val titulo = view.findViewById<TextView>(R.id.editTextUsuarioNome)
-        titulo.setText(usuarioNome)
+        /*val titulo = view.findViewById<TextView>(R.id.editTextUsuarioNome)
+        titulo.setText(usuarioNome)*/
 
         return view
     }
