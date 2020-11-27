@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_result.*
-import kotlinx.android.synthetic.main.fragment_result.*
 
 class ResultActivity : AppCompatActivity() {
 
@@ -25,12 +24,11 @@ class ResultActivity : AppCompatActivity() {
                 "Pontuação final: $finalScore",
                 Toast.LENGTH_LONG
         ).show()
-        //textViewFinalScore.text = "Total de Pontos: $finalScore"
     }
 
     private fun exibirTipoPerfilInvestidor(finalScore: Int) {
         textViewInvestidorPerfil.text =  if (finalScore <= 12) {
-            "Investidor -> Conservador"
+            "Investidor: Conservador"
         } else if (finalScore <= 29) {
              "Investidor: Moderado"
         } else {

@@ -38,12 +38,7 @@ class Question6Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_question6, container, false)
-        val usuarioNome = arguments?.get("userName").toString()
-        /*val titulo = view.findViewById<TextView>(R.id.editTextUsuarioNome)
-        titulo.setText(usuarioNome)*/
-
-        return view
+        return inflater.inflate(R.layout.fragment_question6, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

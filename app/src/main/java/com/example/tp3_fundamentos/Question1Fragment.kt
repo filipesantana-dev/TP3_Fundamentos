@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.activity_questions.*
 import kotlinx.android.synthetic.main.fragment_question1.*
@@ -36,13 +37,7 @@ class Question1Fragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_question1, container, false)
-        val usuarioNome = arguments?.get("userName").toString()
-        /*val titulo = view.findViewById<TextView>(R.id.editTextUsuarioNome)
-        titulo.setText(usuarioNome)*/
-
-
-        return view
+        return inflater.inflate(R.layout.fragment_question1, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

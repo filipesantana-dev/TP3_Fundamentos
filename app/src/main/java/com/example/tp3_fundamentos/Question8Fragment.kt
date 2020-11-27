@@ -35,12 +35,7 @@ class Question8Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_question8, container, false)
-        val usuarioNome = arguments?.get("userName").toString()
-        /*val titulo = view.findViewById<TextView>(R.id.editTextUsuarioNome)
-        titulo.setText(usuarioNome)*/
-
-        return view
+        return inflater.inflate(R.layout.fragment_question8, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,6 +51,7 @@ class Question8Fragment : Fragment() {
 
             var bundleNewScore8 = Bundle(onRadioButtonClicked())
             bundleNewScore8.putInt("score8", scoreQuestion8)
+
             findNavController().navigate(R.id.action_question8Fragment_to_question9Fragment, bundleNewScore8)
         }
     }

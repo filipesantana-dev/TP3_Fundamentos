@@ -19,8 +19,6 @@ class QuestionsActivity : AppCompatActivity() {
 
         nomeUsuario = intent.getStringExtra("userName").toString()
 
-        //var finalScore: Int = 0
-
         Toast.makeText(
                 this,
                 "Olá $nomeUsuario",
